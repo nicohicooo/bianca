@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tinta de Bianca</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .poem-container {
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            overflow: hidden; /* Evita que el texto se desborde */
+        }
+
+        .poem-title-general {
+            color: #333;
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .poem-title {
+            color: #ff6b6b;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .poem-date {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .poem-text {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: left;
+            overflow-y: auto; /* Añade scroll si el texto es demasiado largo */
+            max-height: 300px; /* Altura máxima para evitar desbordamiento */
+            padding: 0 20px;
+            white-space: pre-wrap; /* Mejora los saltos de línea */
+        }
+
+        .poem-nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .prev-btn, .next-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .prev-btn:hover, .next-btn:hover {
+            background: #e53e3e;
+        }
+
+        .current-poem {
+            display: none;
+        }
+
+        .current-poem.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poem-container">
+        <h1 class="poem-title-general">La Tinta de Bianca</h1>
+
+        <!-- Poesía 1 -->
+        <div id="poem1" class="current-poem active">
+            <p class="poem-title">Entre Desaciertos</p>
+            <p class="poem-date">Fecha: 28 de marzo</p>
+            <pre class="poem-text">
+Y entre años de desaciertos, siempre vuelvo. 
+Te busco y no te encuentro. 
+Quizá sea culpa mía por querer verte ahí, 
+o quizá culpa tuya por acostumbrarme así. 
+
+Daría mi vida con tal de verte sonreír, 
+y en el frenesí confesarte todo lo que nunca me atreví: 
+mis secretos más grandes y mi amor por tenerte en todo instante. 
+
+Desmesurado, mi dolor incesante 
+por no poder verte, por no poder tocarte, 
+por no poder apreciarte y menos contarte 
+que vivirías en cada estrofa mientras exista el arte, 
+mientras yo decida retratarte. 
+
+Esas manías irritantes que hacen que yo vuelva 
+y decida no olvidarte. 
+Tan linda tu alma, ¿no querrías quedarte? 
+Qué difícil no amarte, 
+qué difícil arrancar una parte de mí para poder sacarte. 
+Solo quería abrazarte, ¿era eso algo tan complicado de darme?
+
+Me despido antes de pensarte de más. 
+Si es más, no tiene sentido.
+            </pre>
+        </div>
+
+        <!-- Poesía 2 -->
+        <div id="poem2" class="current-poem">
+            <p class="poem-title">Otra Vez Te Pienso</p>
+            <p class="poem-date">Fecha: 29 de marzo</p>
+            <pre class="poem-text">
+Otra vez te pienso, aunque no confiese lo que siento, 
+y por eso mismo lo siento. 
+
+Lo lamento si pensabas que te buscaría. 
+Imaginaba para vos una mejor vida, 
+donde hubiera alguien que sí te mereciera, 
+o quizá sea mi problema en rebajarme, 
+y como resultado pude endiosarte, 
+porque eras mi mundo y yo el dios que creaba arte. 
+
+Ahora al mirarte, recuerdo lo que quería preguntarte: 
+¿Pudiste encontrarte? 
+¿Ahora quién es quien tus sueños comparte? 
+
+Yo, por mi parte, debo contarte 
+que no esperaba reencontrarte. 
+Tampoco caigo en el silencio de volver a acompañarte, 
+puesto que ya no soy quien quisieras, 
+ya no sos quien por mí espera, 
+y pareciera que fue ayer un día como cualquier otro 
+donde te amaba de tal manera. 
+
+Hoy recaigo en ser dos extraños, 
+y no extraño aquellos años, 
+pero me parece extraño verte después de unos años.
+            </pre>
+        </div>
+
+        <!-- Poesía 3 -->
+        <div id="poem3" class="current-poem">
+            <p class="poem-title">Si Existe el Amor Verdadero</p>
+            <p class="poem-date">Fecha: 2 de abril</p>
+            <pre class="poem-text">
+Y el día que yo muriera, quiero que entiendas 
+que en la siguiente vida volvería a buscarte 
+si así me lo permitieran. 
+
+Que no hay nada más que admirarte 
+en cada ciclo de vida quisiera. 
+No hay nada que por vos no hiciera. 
+
+Admiro con detención tu belleza, 
+mientras ríes, mientras me besas, 
+mientras siento que mis problemas se desvanecen al verte. 
+Es una simpleza. 
+
+Que sepas que mientras yo exista, no estás solo. 
+Que al escucharte, lo que me haces sentir, 
+simplemente no puedo explicarte. 
+Solo quiero poder abrazarte. 
+
+Si por vos me muero, si existe el amor verdadero, 
+estoy segura que vos sos el único, el primero. 
+Mi fantasía es pasar con vos un febrero. 
+
+Si me dejas construir el camino, te prometo 
+que no será algo pasajero. Quiero algo duradero. 
+Si es posible morir a tu lado, 
+todo lo que te amo ya te lo he expresado. 
+Espero sea suficiente para amanecer contigo, 
+que te sientas amado. 
+
+Que los días te sean leves, 
+que al llegar a casa sepas que acá te espero, 
+que a este corazón lo tienes tanto creyendo en lo eterno. 
+
+Y cuando ya no me ames, prometo dejarte en paz, 
+y si querés algún día me podés volver a llamar. 
+Como te dije, sabes que acá te voy a esperar. 
+Te quiero comprender, te quiero amar, 
+quiero entender del principio al final. 
+
+Quiero ser yo tu compañera en esta vida de problemas. 
+Verte progresar es mi bienestar. 
+No te digo más para no empalagar. 
+Gracias por estar.
+            </pre>
+        </div>
+
+        <!-- Poesía 4 -->
+        <div id="poem4" class="current-poem">
+            <p class="poem-title">Tu Mirada</p>
+            <p class="poem-date">Fecha: 3 de abril</p>
+            <pre class="poem-text">
+Tu mirada mantiene mi cordura intacta, 
+en esas noches largas donde a la vida no le pongo ganas, 
+o quizá sí, pero no sea lo suficiente. 
+
+Así, otra vez pienso que está mal en mí. 
+Pensar... La respuesta siempre estuvo ahí, 
+no lo quise percibir y por eso seguí. 
+
+Ahora te miro ahí y quiero ser mejor. 
+Yo te puedo proyectar amor, 
+que seas el ser más libre que he conocido 
+y aún así decidas quedarte conmigo. 
+
+Dame tu mano, mi alma tendrás a cambio, 
+porque ciego es quien ama, 
+y en tu mirada me volví vidente y encontré la calma. 
+
+Me mostraste un mundo nuevo 
+cuando quedó chico el panorama. 
+Hoy soy quien da las gracias, 
+quien te refleja en letras con constancia.
+            </pre>
+        </div>
+
+        <!-- Poesía 5 -->
+        <div id="poem5" class="current-poem">
+            <p class="poem-title">Te Volvería a Elegir</p>
+            <p class="poem-date">Fecha: 12 de abril</p>
+            <pre class="poem-text">
+Entre tanta gente que va y viene, 
+te volvería a elegir nuevamente. 
+
+Si muriese, te reencontraría en otra vía, 
+donde estuvieses, te reconocería 
+como si mi alma solo a vos te correspondiese. 
+
+Mi corazón solo late libremente a tu lado, 
+hace que me exprese, 
+sacas mi lado más humano. 
+
+¿Qué haría si no te tuviese? 
+Esperaría horas, semanas, tal vez meses, 
+por ser quien ahora te ama con creces. 
+
+Y ves cómo tu alma poco a poco los miedos pierde, 
+cómo todo se aclara. 
+Verte feliz es lo que mi ser proclama, 
+y aunque no sea por mí, yo cumplí con mi hazaña. 
+
+Quizá mañana vuelvas por acá, 
+y podrás estar seguro que acá va a estar tu lugar.
+            </pre>
+        </div>
+
+        <!-- Poesía 6 -->
+        <div id="poem6" class="current-poem">
+            <p class="poem-title">Vuelvo Siempre</p>
+            <p class="poem-date">Fecha: 20 de abril</p>
+            <pre class="poem-text">
+Y entre años de desaciertos, siempre vuelvo. 
+Te busco y no te encuentro. 
+Quizá sea culpa mía por querer verte ahí, 
+o quizá culpa tuya por acostumbrarme así. 
+
+Daría mi vida con tal de verte sonreír, 
+y en el frenesí confesarte todo lo que nunca me atreví: 
+mis secretos más grandes y mi amor por tenerte en todo instante. 
+
+Desmesurado, mi dolor incesante 
+por no poder verte, por no poder tocarte, 
+por no poder apreciarte y menos contarte 
+que vivirías en cada estrofa mientras exista el arte, 
+mientras yo decida retratarte. 
+
+Esas manías irritantes que hacen que yo vuelva 
+y decida no olvidarte. 
+Tan linda tu alma, ¿no querrías quedarte? 
+Qué difícil no amarte, 
+qué difícil arrancar una parte de mí para poder sacarte. 
+Solo quería abrazarte, ¿era eso algo tan complicado de darme?
+
+Me despido antes de pensarte de más. 
+Si es más, no tiene sentido.
+            </pre>
+        </div>
+
+        <!-- Poesía 7 -->
+        <div id="poem7" class="current-poem">
+            <p class="poem-title">Extraños Después de Años</p>
+            <p class="poem-date">Fecha: 21 de abril</p>
+            <pre class="poem-text">
+Otra vez te pienso, aunque no confiese lo que siento, 
+y por eso mismo lo siento. 
+
+Lo lamento si pensabas que te buscaría. 
+Imaginaba para vos una mejor vida, 
+donde hubiera alguien que sí te mereciera, 
+o quizá sea mi problema en rebajarme, 
+y como resultado pude endiosarte, 
+porque eras mi mundo y yo el dios que creaba arte. 
+
+Ahora al mirarte, recuerdo lo que quería preguntarte: 
+¿Pudiste encontrarte? 
+¿Ahora quién es quien tus sueños comparte? 
+
+Yo, por mi parte, debo contarte 
+que no esperaba reencontrarte. 
+Tampoco caigo en el silencio de volver a acompañarte, 
+puesto que ya no soy quien quisieras, 
+ya no sos quien por mí espera, 
+y pareciera que fue ayer un día como cualquier otro 
+donde te amaba de tal manera. 
+
+Hoy recaigo en ser dos extraños, 
+y no extraño aquellos años, 
+pero me parece extraño verte después de unos años.
+            </pre>
+        </div>
+
+        <!-- Navegación -->
+        <div class="poem-nav">
+            <button class="prev-btn" onclick="previousPoem()">Anterior</button>
+            <button class="next-btn" onclick="nextPoem()">Siguiente</button>
+        </div>
+    </div>
+
+    <script>
+        let currentPoemIndex = 0;
+        const poems = document.querySelectorAll('.current-poem');
+
+        function showPoem(index) {
+            poems.forEach((poem, i) => {
+                poem.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextPoem() {
+            currentPoemIndex = (currentPoemIndex + 1) % poems.length;
+            showPoem(currentPoemIndex);
+        }
+
+        function previousPoem() {
+            currentPoemIndex = (currentPoemIndex - 1 + poems.length) % poems.length;
+            showPoem(currentPoemIndex);
+        }
+
+        // Inicializar la primera poesía
+        showPoem(currentPoemIndex);
+    </script>
+</body>
+</html>
